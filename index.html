@@ -3,131 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المكتبة الرقمية: القائد الاستراتيجي</title>
-    <style>
-        /* الألوان الرئيسية المتطابقة مع تصميم الكتاب */
-        :root {
-            --bg-color: #1a1a1a;
-            --card-bg: #2d2d2d;
-            --text-color: #e0e0e0;
-            --gold-color: #ffd700;
-            --accent-color: #00d2ff;
-            --border-color: #444;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            padding: 40px 0;
-        }
-
-        .library-container {
-            width: 90%;
-            max-width: 800px;
-            background-color: var(--card-bg);
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            text-align: right;
-            border: 1px solid var(--border-color);
-        }
-
-        /* تنسيق العناوين */
-        h1 {
-            color: var(--gold-color);
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            color: var(--accent-color);
-            font-size: 2rem;
-            margin-top: 30px;
-            border-bottom: 2px solid var(--gold-color);
-            padding-bottom: 10px;
-            text-align: center;
-        }
-
-        /* تنسيق قائمة الكتب */
-        .book-list ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 30px;
-        }
-
-        .book-list li {
-            background-color: #3a3a3a;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            transition: background-color 0.3s;
-            border-right: 5px solid var(--gold-color);
-        }
-
-        .book-list li:hover {
-            background-color: #444444;
-        }
-
-        .book-list a {
-            color: var(--gold-color);
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
-        
-        .book-list a.complete {
-             color: var(--accent-color); /* لون مميز للكتاب المكتمل */
-        }
-        
-        .book-list p {
-            color: var(--text-color);
-            font-size: 1rem;
-            margin: 0;
-        }
-        
-        /* حالة "قريباً" */
-        .book-list .soon {
-            color: #888;
-            font-style: italic;
-        }
-        .book-list .soon a {
-            color: #888;
-        }
-
-    </style>
+    <title>مكتبة القارئ الأنيق</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="library-container">
-        
-        <h1>🏛️ المكتبة الرقمية: القائد الاستراتيجي</h1>
-        <h2>استراتيجيات البناء، النمو، والخلود</h2>
-        
-        <div class="book-list">
-            <ul>
-                <li>
-                    <a href="book_one_complete.html" class="complete">الكتاب الأول: بناء الإمبراطورية (مكتمل)</a>
-                    <p>من الرؤية إلى الواقع: خارطة طريق من 10 خطوات للقيادة والتنفيذ.</p>
-                </li>
-                
-                <li class="soon">
-                    <a href="#">الكتاب الثاني: خريطة الثروة (قريباً)</a>
-                    <p>الذكاء المالي واستراتيجيات النمو.</p>
-                </li>
-            </ul>
+    <header class="main-header">
+        <h1>📚 أرشيف القارئ: كنوز المعرفة بين يديك</h1>
+        <p>اكتشف مجموعتنا من الكتب المختارة بعناية.</p>
+    </header>
+
+    <main class="books-grid" id="books-grid">
+        <div class="book-card" data-book-id="book1">
+            <div class="card-cover">
+                <img src="https://via.placeholder.com/150x220/8b4513/ffffff?text=كتاب+1" alt="غلاف كتاب فن اللامبالاة">
+            </div>
+            <div class="card-info">
+                <h2>فن اللامبالاة</h2>
+                <p>مارك مانسون</p>
+                <span>انقر للقراءة</span>
+            </div>
+        </div>
+
+        <div class="book-card" data-book-id="book2">
+            <div class="card-cover">
+                <img src="https://via.placeholder.com/150x220/008080/ffffff?text=كتاب+2" alt="غلاف كتاب قوة عقلك الباطن">
+            </div>
+            <div class="card-info">
+                <h2>قوة عقلك الباطن</h2>
+                <p>جوزيف ميرفي</p>
+                <span>انقر للقراءة</span>
+            </div>
         </div>
         
-    </div>
+        </main>
+    
+    <section class="content-page" id="content-page">
+        <button class="back-button" id="back-button">العودة إلى المكتبة</button>
+        <div class="content-container">
+            <h2 id="content-title">عنوان الكتاب</h2>
+            <div id="content-details">
+                </div>
+        </div>
+    </section>
 
+    <script src="script.js"></script>
 </body>
-  </html>
-  
+    </html>
+    
