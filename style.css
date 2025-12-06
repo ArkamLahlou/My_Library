@@ -1,0 +1,133 @@
+/* تنسيق عام */
+body {
+    font-family: 'Changa', sans-serif; /* استخدام خط عربي أنيق */
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    direction: rtl;
+}
+
+/* العنوان الرئيسي */
+.main-header {
+    background-color: #4CAF50; /* لون جذاب */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-header h1 {
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+.main-header p {
+    opacity: 0.9;
+}
+
+/* شبكة البطاقات */
+.books-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* تصميم البطاقة الواحدة */
+.book-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px); /* تأثير رفع عند المرور */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-cover img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-info h2 {
+    font-size: 1.2rem;
+    color: #00796B; /* لون العنوان */
+    margin: 5px 0;
+}
+
+.card-info p {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.card-info span {
+    display: inline-block;
+    background-color: #FFC107;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* تنسيق صفحة المحتوى (مخفية في البداية) */
+.content-page {
+    display: none; /* إخفاء الصفحة في البداية */
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.content-page.active {
+    display: block; /* إظهار الصفحة عند التفعيل */
+}
+
+.back-button {
+    background-color: #FF6F00; /* لون برتقالي للعودة */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #E65100;
+}
+
+.content-container h2 {
+    color: #4CAF50;
+    border-bottom: 2px solid #EEE;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.content-details p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    text-align: justify;
+}
